@@ -1,4 +1,5 @@
 function date_diff() {
+    diff_txt = document.getElementById("tot_diff")
     const date_fin = new Date(document.getElementById("annee2").value, document.getElementById("mois2").value - 1, document.getElementById("jour2").value);
     const date_debut = new Date(document.getElementById("annee1").value, document.getElementById("mois1").value - 1, document.getElementById("jour1").value);
     console.log(date_debut);
@@ -8,6 +9,12 @@ function date_diff() {
     var year = today.getFullYear();
     var month = today.getMonth()+1;
     var day = today.getDate();
+    diffYears = date_fin.getFullYear()-date_debut.getFullYear();
+    diffMonths = date_fin.getMonth()-date_debut.getMonth();
+    diffDays = date_fin.getDay()-date_debut.getDay();
+    //console.log("La difference est "+date_fin.getFullYear()-date_debut.getFullYear()+" annees, "+date_fin.getMonth()-date_debut.getMonth()+" mois et "+date_fin.getDay()-date_debut.getDay()+" jours.");
+
+    diff_txt.textContent = "La difference est "+diffYears.toString()+" annees, "+diffMonths.toString()+" mois et "+diffDays.toString()+" jours.";
     //var formattedDate = year+"-"+(month<10 ? "0"+month:month)+"-"+(day<10 ? "0"+day:day)
     //var today_txt = document.getElementById("today");
     //today_txt.textContent = formattedDate;
