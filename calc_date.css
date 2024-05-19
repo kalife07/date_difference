@@ -1,0 +1,20 @@
+.error_txt{
+    color: red;
+}
+
+h1,h2,select,button {
+    font-family:fantasy;
+    color:maroon;
+}
+
+body{
+    background-color: lightcoral;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the child elements */
+    align-items: center; /* Vertically center the child elements */
+    height: 100vh; /* Set the height of the container to the viewport height */
+}
