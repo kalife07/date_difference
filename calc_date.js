@@ -13,8 +13,8 @@ function date_diff() {
     diffMonths = date_fin.getMonth()-date_debut.getMonth();
     diffDays = date_fin.getDay()-date_debut.getDay();
     //console.log("La difference est "+date_fin.getFullYear()-date_debut.getFullYear()+" annees, "+date_fin.getMonth()-date_debut.getMonth()+" mois et "+date_fin.getDay()-date_debut.getDay()+" jours.");
-
-    diff_txt.textContent = "La difference est "+diffYears.toString()+" annees, "+diffMonths.toString()+" mois et "+diffDays.toString()+" jours.";
+    let specialChar = "\u00E9";
+    diff_txt.textContent = "La difference est "+diffYears.toString()+" ann"+specialChar+"es, "+diffMonths.toString()+" mois et "+diffDays.toString()+" jours.";
     //var formattedDate = year+"-"+(month<10 ? "0"+month:month)+"-"+(day<10 ? "0"+day:day)
     //var today_txt = document.getElementById("today");
     //today_txt.textContent = formattedDate;
